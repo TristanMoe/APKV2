@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L02/Headers/MyArray.h
+assert.h
+/home/stud/Desktop/Clion/Projects/L02/Headers/assert.h
+
+/home/stud/Desktop/Clion/Projects/L02/Headers/Person.h
+string
+-
+
+/home/stud/Desktop/Clion/Projects/L02/main.cpp
+iostream
+-
+Headers/MyArray.h
+/home/stud/Desktop/Clion/Projects/L02/Headers/MyArray.h
+Headers/Person.h
+/home/stud/Desktop/Clion/Projects/L02/Headers/Person.h
+

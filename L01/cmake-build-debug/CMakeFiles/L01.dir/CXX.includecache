@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L01/Headers/helper.h
+
+/home/stud/Desktop/Clion/Projects/L01/Headers/sharedPtr.h
+cstddef
+-
+cassert
+-
+helper.h
+/home/stud/Desktop/Clion/Projects/L01/Headers/helper.h
+
+/home/stud/Desktop/Clion/Projects/L01/main.cpp
+iostream
+-
+Headers/sharedPtr.h
+/home/stud/Desktop/Clion/Projects/L01/Headers/sharedPtr.h
+
