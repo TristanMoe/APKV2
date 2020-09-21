@@ -85,6 +85,9 @@
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L02/Headers/MyArray.h">
 			<Option target="L02"/>
 		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L02/Headers/MyArrayIterator.h">
+			<Option target="L02"/>
+		</Unit>
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L02/Headers/Person.h">
 			<Option target="L02"/>
 		</Unit>

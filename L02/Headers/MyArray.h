@@ -7,15 +7,14 @@
 
 
 #include "assert.h"
+#include "MyArrayIterator.h"
 
 template<typename T, std::size_t N>
 class MyArray
 {
 public:
     // User defined size.
-    MyArray()
-        : arrayPtr(new T [N]), size_(N)
-    {   }
+    MyArray() : arrayPtr(new T [N]), size_(N) {   }
 
     template<typename D>
     MyArray(const MyArray<D, N>& toCopy)
@@ -37,7 +36,7 @@ public:
     {
         delete[] arrayPtr;
         arrayPtr = new T [rhs.count()];
-        D * startValue = rhs.begin();
+        MyArrayIterator<D> startValue = rhs.begin();
         for(auto index = 0; index < rhs.count(); index++)
         {
             arrayPtr[index] = *startValue;
@@ -55,12 +54,12 @@ public:
     // Return first element
     // Cannot be dereferenced or changed within function
     // Possible to change value.
-    T * const begin() const;
+    MyArrayIterator<T> const begin() const;
 
     // Return last element
     // Cannot be dereferenced or changed within function
     // Possible to change value
-    T * const end() const;
+    MyArrayIterator<T> const end() const;
 
     T& operator[](int i);
 
@@ -75,15 +74,15 @@ private:
 };
 
 template<typename T, std::size_t N>
-T * const MyArray<T, N>::begin() const {
+MyArrayIterator<T> const MyArray<T, N>::begin() const {
     // assert(!isEmpty() && arrayPtr != nullptr);
-    return &arrayPtr[0];
+    return MyArrayIterator<T>(&arrayPtr[0]);
 }
 
 template<typename T, std::size_t N>
-T *const MyArray<T, N>::end() const {
+MyArrayIterator<T> const MyArray<T, N>::end() const {
     // assert(!isEmpty() && arrayPtr != nullptr);
-    return size_ > 0 ? &arrayPtr[size_-1] + 1 : &arrayPtr[0];
+    return MyArrayIterator<T>(size_ > 0 ? &arrayPtr[size_-1] + 1 : &arrayPtr[0]);
 }
 
 
@@ -110,11 +109,8 @@ void MyArray<T, N>::fill(const T & value) {
 
 template<typename T, std::size_t N>
 void MyArray<T, N>::print() {
-    std::cout << "Begin: " << *(begin()) << " End: " << *(end()-1) << " Size: " << count() << std::endl;
-    for (auto iter = 0; iter < count(); iter++)
-    {
-        std::cout << "Index: " << iter << " , Value: " << arrayPtr[iter] << std::endl;
-    }
+    std::ostream_iterator< T& > outPut(std::cout, "\n");
+    std::copy(begin(), end(), outPut);
 }
 
 template<typename T, std::size_t N>
@@ -143,7 +139,7 @@ public:
         : size_(toCopy.count())
     {
         arrayPtr = new T* [toCopy.count()];
-        T ** startValue = toCopy.begin();
+        MyArrayIterator<T*> startValue = toCopy.begin();
         for(auto index = 0; index < size_; index++)
         {
             arrayPtr[index] = new T(**startValue);
@@ -158,7 +154,7 @@ public:
         {
             delete arrayPtr[index];
         }
-        D ** startValue = rhs.begin();
+        MyArrayIterator<T *> startValue = rhs.begin();
         size_ = rhs.count();
         arrayPtr = new T *[size_];
         for(auto index = 0; index < rhs.count(); index++)
@@ -172,15 +168,12 @@ public:
 
     size_t count() const;
     void fill(T*);
-    T ** const begin() const;
-    T ** const end() const;
+    MyArrayIterator<T*> const begin() const;
+    MyArrayIterator<T*> const end() const;
     T *& operator[](int i) const;
     void print(){
-        std::cout << "Begin: " << **(begin()) << " End: " << **(end()-1) << " Size: " << size_ << std::endl;
-        for (auto iter = 0; iter < size_; iter++)
-        {
-            std::cout << "Index: " << iter << " , Pointer Address: " << arrayPtr[iter] << ", Pointer Value: " << *arrayPtr[iter] << std::endl;
-        }
+        std::ostream_iterator< T*& > outPut(std::cout, "\n");
+        std::copy(begin(), end(), outPut);
     }
 
 private:
@@ -189,13 +182,13 @@ private:
 };
 
 template<typename T, std::size_t N>
-T ** const MyArray<T*, N>::begin() const {
-    return &arrayPtr[0];
+MyArrayIterator<T*> const MyArray<T*, N>::begin() const {
+    return MyArrayIterator<T*>(&arrayPtr[0]);
 }
 
 template<typename T, std::size_t N>
-T ** const MyArray<T*, N>::end() const {
-    return size_ > 0 ? &arrayPtr[size_-1] + 1 : &arrayPtr[0];
+MyArrayIterator<T*> const MyArray<T*, N>::end() const {
+    return MyArrayIterator<T*>(size_ > 0 ? &arrayPtr[size_-1] + 1 : &arrayPtr[0]);
 }
 
 template<typename T, std::size_t N>

@@ -1,10 +1,12 @@
 #include <iostream>
 #include "Headers/MyArray.h"
 #include "Headers/Person.h"
+#include <algorithm>
+#include "Headers/MyArrayIterator.h"
 
 // Added 2 types to remove
 template<typename T, typename D>
-T* myfind(T* first, T* last, const D& v)
+MyArrayIterator<T> myfind(MyArrayIterator<T> first, MyArrayIterator<T> last, const D& v)
 {
     do{
         if(*first == v)
@@ -15,7 +17,7 @@ T* myfind(T* first, T* last, const D& v)
 }
 
 template<typename T, typename D>
-T** myfind(T** first, T** last, const D& v)
+MyArrayIterator<T*> myfind(MyArrayIterator<T*> first, MyArrayIterator<T*> last, const D& v)
 {
     do{
         if(**first == v)
@@ -24,6 +26,30 @@ T** myfind(T** first, T** last, const D& v)
     } while (first != last);
     return last;
 }
+
+template<typename U>
+typename U:: value_type myAccumalation(const U& u)
+{
+    typename U:: value_type m = typename U:: value_type ();
+    for(auto first: u)
+    {
+        m += first;
+    }
+    return m;
+}
+
+/* int main() {
+    MyArray<int, 5> m1;
+    m1.fill(5);
+    MyArrayIterator<int> it_begin = m1.begin();
+    MyArrayIterator<int> it_end = m1.end();
+    std::ostream_iterator< int > outputArray(std::cout, "\n");
+    std::copy(it_begin, it_end, outputArray);
+
+    std::ostream_iterator< int > outputInt(std::cout, " ");
+    std::copy(m1.begin(), m1.end(), outputInt);
+    return 0;
+} */
 
 int main() {
 
@@ -36,7 +62,7 @@ int main() {
         std::cout << "Index operator: " << s_ptr1[0] << std::endl;
         std::string * data2 = new std::string("B");
         s_ptr1[0] = new std::string("CBA");
-        std::string ** temp = s_ptr1.begin();
+        MyArrayIterator<std::string* > temp = s_ptr1.begin();
         std::cout << "Specialization value: " << **temp << std::endl;
         s_ptr1.print();
 
@@ -68,32 +94,25 @@ int main() {
     // integer
     MyArray<double, 10> s2;
     s2.fill(1);
-    std::cout << *(s2.begin()) << std::endl;
-    std::cout << *(s2.end()) << std::endl;
 
     {
         s2[3] = 3;
         s2.print();
         std::cout << "Looking for '3'? " << (myfind(s2.begin(), s2.end(), 3) != s2.end() ? "found" : "sry no")
-                  << std::endl;
+                << std::endl;
 
         MyArray<std::string *, 6> my;
         my.fill(new std::string(""));
         delete my[5];
-        my[5] = new std:: string("Hello"); // Assuming that my is a MyArray of string pointers
-        std::cout << "Looking for 'Hello '? " << (myfind(my.begin (), my.end(),
-                                                         std:: string("Hello")) != my.end()? "found" : "sry no") << std::endl;
+        my[5] = new std:: string("Bobby"); // Assuming that my is a MyArray of string pointers
+          std::cout << "Looking for 'Hello '? " << (myfind(my.begin(), my.end(),
+                                                        std:: string("Hello")) != my.end()? "found" : "sry no") << std::endl;
     }
 
-
-
     // Custom class
-    /*
-    MyArray<Person, 2> s3;
-    Person * Bob = new Person("Bob", 52);
-    s3.fill(*Bob);
+    MyArray<Person *, 2> s3;
+    s3.fill(new Person("Bob", 52));
     s3.print();
-    */
 
     // Conversion between types
     MyArray <int, 5> myInt; // Array based on 'int'
@@ -101,5 +120,6 @@ int main() {
 
     myInt.fill(5);
     myDouble = myInt;
+
     return 0;
 }

@@ -9,6 +9,14 @@
 /home/stud/Desktop/Clion/Projects/L02/Headers/MyArray.h
 assert.h
 /home/stud/Desktop/Clion/Projects/L02/Headers/assert.h
+MyArrayIterator.h
+/home/stud/Desktop/Clion/Projects/L02/Headers/MyArrayIterator.h
+
+/home/stud/Desktop/Clion/Projects/L02/Headers/MyArrayIterator.h
+ostream
+-
+iterator
+-
 
 /home/stud/Desktop/Clion/Projects/L02/Headers/Person.h
 string
@@ -21,4 +29,8 @@ Headers/MyArray.h
 /home/stud/Desktop/Clion/Projects/L02/Headers/MyArray.h
 Headers/Person.h
 /home/stud/Desktop/Clion/Projects/L02/Headers/Person.h
+algorithm
+-
+Headers/MyArrayIterator.h
+/home/stud/Desktop/Clion/Projects/L02/Headers/MyArrayIterator.h
 
