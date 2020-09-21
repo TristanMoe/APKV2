@@ -91,6 +91,12 @@
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L04_STL/headers/Product.h">
 			<Option target="L04_STL"/>
 		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L04_STL/headers/Test.h">
+			<Option target="L04_STL"/>
+		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L04_STL/headers/Wrapper.h">
+			<Option target="L04_STL"/>
+		</Unit>
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L04_STL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -27,6 +27,16 @@ string
 -
 assert.h
 -
+numeric
+-
+functional
+-
+headers/Test.h
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Test.h
+headers/Wrapper.h
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Wrapper.h
+boost/bind.hpp
+-
 
 /home/stud/Desktop/Clion/Projects/L04_STL/headers/Discount.h
 Product.h
@@ -36,5 +46,15 @@ Product.h
 iostream
 -
 vector
+-
+
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Test.h
+iostream
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/iostream
+
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Wrapper.h
+iostream
+-
+functional
 -
 

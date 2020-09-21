@@ -4,4 +4,6 @@
 CMakeFiles/L04_STL.dir/algo.cpp.o: ../algo.cpp
 CMakeFiles/L04_STL.dir/algo.cpp.o: ../headers/Discount.h
 CMakeFiles/L04_STL.dir/algo.cpp.o: ../headers/Product.h
+CMakeFiles/L04_STL.dir/algo.cpp.o: ../headers/Test.h
+CMakeFiles/L04_STL.dir/algo.cpp.o: ../headers/Wrapper.h
 

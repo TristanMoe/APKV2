@@ -3,4 +3,4 @@ project(L04_STL)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(L04_STL algo.cpp headers/Product.h headers/Discount.h)
+add_executable(L04_STL algo.cpp headers/Product.h headers/Discount.h headers/Wrapper.h headers/Test.h)

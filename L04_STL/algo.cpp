@@ -13,6 +13,8 @@
 #include <vector>
 #include <string>
 #include <assert.h>
+#include <numeric>
+#include <functional>
 
 
 #define PRODUCT_DB_FILE		"/home/stud/Desktop/Clion/Projects/L04_STL/product.db"
@@ -108,14 +110,35 @@ void addDiscountUsingForEachFunctor(ProductList& pl)
  */
 void addDiscountUsingTransform(ProductList& pl)
 {
+    std::cout << "##################################################" << std::endl;
+    std::ostream_iterator< Product > outputDiscountedProducts(std::cout, "\n");
+
+    auto get_discount = []()
+    {
+        std::cout << "Please enter discount" << std::endl;
+        std::istream_iterator< float > inputDiscount(std::cin);
+        float discount = std::clamp(*inputDiscount, .1f, .9f);
+        return [discount](Product& pr){pr.setPrice(pr.price()*discount); return pr;};
+    };
+
+    std::transform(pl.begin(), pl.end(), outputDiscountedProducts, get_discount());
+    std::cout << "##################################################" << std::endl;
 }
 
 
 /**
  * Calculate the total amount of sold products
  */
-void calcTotalSoldProducts(ProductList& pl)
+void calcTotalSoldProducts(const ProductList& pl)
 {
+    std::cout << "##################################################" << std::endl;
+    std::cout << "Total Amount of Sold Products" << std::endl;
+    auto binaryOperation = [](const unsigned int total, const Product& pr){
+        return total + pr.sold();
+    };
+    const auto totalAmount = std::accumulate(pl.begin(), pl.end(), 0, binaryOperation);
+    std::cout << "Total Amount: " << totalAmount << std::endl;
+    std::cout << "##################################################" << std::endl;
 }
 
 
@@ -123,8 +146,21 @@ void calcTotalSoldProducts(ProductList& pl)
  * Setting discount using bind2nd - OPTIONAL
  */
 
-
+#include "headers/Test.h"
+#include "headers/Wrapper.h"
+#include <boost/bind.hpp>
+// Exercise 4
 int main()
+{
+    Test t;
+    Wrapper<int> w(boost::bind(&Test::printExt , t, _1));
+    std::vector <int > v({ 1,3,4,6,8});
+    std::copy(v.begin (), v.end(), w);
+}
+
+
+// Exercise 1 - 3
+/* int main()
 {
   bool        running = true;
   ProductList pl;
@@ -187,7 +223,5 @@ int main()
       case 'Q':
         running = false;
     }
-    
-    
   }
-}
+} */
