@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/L04_STL.dir/algo.cpp.o  -o L04_STL 

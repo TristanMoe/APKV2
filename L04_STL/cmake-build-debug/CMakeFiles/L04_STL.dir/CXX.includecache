@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L04_STL/algo.cpp
+fstream
+-
+iostream
+-
+headers/Product.h
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Product.h
+headers/Discount.h
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Discount.h
+iterator
+-
+algorithm
+-
+functional
+-
+vector
+-
+string
+-
+assert.h
+-
+
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Discount.h
+Product.h
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Product.h
+
+/home/stud/Desktop/Clion/Projects/L04_STL/headers/Product.h
+iostream
+-
+vector
+-
+
