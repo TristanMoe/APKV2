@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L05_Variant/headers/Person.hpp
+boost/variant.hpp
+/home/stud/Desktop/Clion/Projects/L05_Variant/headers/boost/variant.hpp
+iostream
+-
+
+/home/stud/Desktop/Clion/Projects/L05_Variant/main.cpp
+iostream
+-
+boost/variant.hpp
+/home/stud/Desktop/Clion/Projects/L05_Variant/boost/variant.hpp
+headers/Person.hpp
+/home/stud/Desktop/Clion/Projects/L05_Variant/headers/Person.hpp
+

@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/stud/Desktop/Clion/Projects/L05_Variant/headers/Person.h">
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L05_Variant/headers/Person.hpp">
 			<Option target="L05_Variant"/>
 		</Unit>
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L05_Variant/main.cpp">
