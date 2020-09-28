@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L05_Timer/Bindfunction.cpp
+string
+-
+iostream
+-
+mutex
+-
+functional
+-
+boost/bind.hpp
+-
+headers/Events.hpp
+/home/stud/Desktop/Clion/Projects/L05_Timer/headers/Events.hpp
+headers/Timer.hpp
+/home/stud/Desktop/Clion/Projects/L05_Timer/headers/Timer.hpp
+
+/home/stud/Desktop/Clion/Projects/L05_Timer/headers/Events.hpp
+chrono
+-
+iostream
+-
+
+/home/stud/Desktop/Clion/Projects/L05_Timer/headers/Timer.hpp
+string
+-
+map
+-
+thread
+-
+functional
+-
+chrono
+-
+

@@ -14,7 +14,7 @@ public:
     Wrapper(std::function<void(T)> objFunctor) : wrapperFunctor(objFunctor){}
     Wrapper(const Wrapper& toCopy) : wrapperFunctor(toCopy.wrapperFunctor) {}
     Wrapper& operator=(const Wrapper& rhs) {wrapperFunctor = rhs.wrapperFunctor; return *this; }
-    Wrapper& operator=(const T& value){return *this; }
+    Wrapper& operator=(const T& value){ wrapperFunctor(value); return *this; }
     Wrapper& operator++() {return *this;}
     Wrapper& operator++(int) { return *this; }
     bool operator==(const Wrapper& rhs) const {return wrapperFunctor == rhs.wrapperFunctor;}

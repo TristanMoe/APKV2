@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -g   CMakeFiles/L05_Timer.dir/Bindfunction.cpp.o CMakeFiles/L05_Timer.dir/source/Events.cpp.o CMakeFiles/L05_Timer.dir/source/Timer.cpp.o  -o L05_Timer 

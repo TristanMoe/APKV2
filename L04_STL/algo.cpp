@@ -145,17 +145,23 @@ void calcTotalSoldProducts(const ProductList& pl)
 /**
  * Setting discount using bind2nd - OPTIONAL
  */
-
 #include "headers/Test.h"
 #include "headers/Wrapper.h"
 #include <boost/bind.hpp>
 // Exercise 4
 int main()
 {
-    Test t;
-    Wrapper<int> w(boost::bind(&Test::printExt , t, _1));
+    Test t1;
+
+    //Iterator adapter
+    Wrapper<int> w(boost::bind(&Test::printExt , t1, _1));
     std::vector <int > v({ 1,3,4,6,8});
     std::copy(v.begin (), v.end(), w);
+
+    // Lambda
+    auto printFunctor = boost::bind(&Test::printExt , t1, _1);
+
+    std::for_each(v.begin(), v.end(), printFunctor);
 }
 
 

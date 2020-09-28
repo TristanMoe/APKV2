@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/L05.dir/main.cpp.o CMakeFiles/L05.dir/source/SensorPrinter.cpp.o  -o L05 
