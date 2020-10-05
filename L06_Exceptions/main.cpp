@@ -15,9 +15,9 @@ int main()
     {
         v.push_back(10);
     }
-    v.insert(30, 30);
+    v.insert(15, 12);
     cout << "Size: " << v.size() << " Capacity: " << v.capacity() << endl;
-    cout << "Place " << 30 << " Value: " << v[30] << endl;
+    cout << "Place " << 30 << " Value: " << v[12] << endl;
 
     cout << "Printing all vector values:" << endl;
     cout << "===========================" << endl;

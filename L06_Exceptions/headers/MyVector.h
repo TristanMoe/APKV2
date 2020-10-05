@@ -110,16 +110,8 @@ void MyVector<T>::pop_back() {
 
 template<typename T>
 void MyVector<T>::insert(const T &t, size_t n) {
-    if(n > capacity())
-    {
-        NewCopy(data_, size(), n*2);
-        data_[n] = t;
-
-        size_++;
-        capacity_ = n*2;
-    } else {
-        data_[n] = t;
-    }
+    assert(n <= size());
+    data_[n] = t;
 }
 
 template<typename T>
