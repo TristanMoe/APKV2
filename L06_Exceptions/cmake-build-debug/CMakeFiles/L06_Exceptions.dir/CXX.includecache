@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFile.h
+string
+-
+stdexcept
+-
+
+/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/MyVector.h
+cstddef
+-
+iostream
+-
+algorithm
+-
+assert.h
+-
+
+/home/stud/Desktop/Clion/Projects/L06_Exceptions/main.cpp
+iostream
+-
+iterator
+-
+headers/LogFile.h
+/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFile.h
+headers/MyVector.h
+/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/MyVector.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/L06_Exceptions.dir/main.cpp.o CMakeFiles/L06_Exceptions.dir/source/LogFile.cpp.o  -o L06_Exceptions 
