@@ -2,12 +2,13 @@
 //
 
 #include <iostream>
-#include <iterator>
-using namespace std;
+#include "boost/filesystem.hpp"
 
 #include "headers/LogFile.h"
 #include "headers/MyVector.h"
+#include "headers/LogFileException.h"
 
+/*
 int main()
 {
     MyVector<int> v(10);
@@ -27,84 +28,27 @@ int main()
 
     return 0;
 }
+ */
 
-/*
 int main()
 {
-    {
+    try {
         LogFile dummy;
-        if( !dummy.write( "Writing from main" ) )
-        {
-            switch( dummy.getState() )
-            {
-                case LogFile::es_OK:
-                    break;
-                case LogFile::es_NOT_INITIALIZED:
-                    cerr << "Dummy not initialized" << endl;
-                    break;
-                case LogFile::es_COULD_NOT_OPEN_FILE:
-                    cerr << "Could not open Dummy" << endl;
-                    break;
-                case LogFile::es_FILENAME_IS_EMPTY:
-                    cerr << "Dummy filename is empty" << endl;
-                    break;
-            }
-        }
+        dummy.write( "Writing from main" );
+    } catch (LogFileException & ex) {
+        std::cout << ex.what() << std::endl;
     }
 
-    LogFile logFile( "Exceptions.log" );
-    if( logFile.getState() != LogFile::es_OK )
-    {
-        switch( logFile.getState() )
-        {
-            case LogFile::es_OK:
-                break;
-            case LogFile::es_NOT_INITIALIZED:
-                cerr << "LogFile not initialized" << endl;
-                break;
-            case LogFile::es_COULD_NOT_OPEN_FILE:
-                cerr << "Could not open LogFile" << endl;
-                break;
-            case LogFile::es_FILENAME_IS_EMPTY:
-                cerr << "LogFile filename is empty" << endl;
-                break;
-        }
-    }
-    else if(!logFile.write( "Writing from main" ) )
-    {
-        switch( logFile.getState() )
-        {
-            case LogFile::es_OK:
-                break;
-            case LogFile::es_NOT_INITIALIZED:
-                cerr << "LogFile not initialized" << endl;
-                break;
-            case LogFile::es_COULD_NOT_OPEN_FILE:
-                cerr << "Could not open LogFile" << endl;
-                break;
-            case LogFile::es_FILENAME_IS_EMPTY:
-                cerr << "LogFile filename is empty" << endl;
-                break;
-        }
+    try {
+        LogFile logFile( "Exceptions.log" );
+    } catch (LogFileException & ex) {
+        std::cout << ex.what() << std::endl;
     }
 
-    if(logFile.getState() == LogFile::es_OK)
-        if( !logFile.write( "Writing from main - again" ) )
-        {
-            switch( logFile.getState() )
-            {
-                case LogFile::es_OK:
-                    break;
-                case LogFile::es_NOT_INITIALIZED:
-                    cerr << "LogFile not initialized" << endl;
-                    break;
-                case LogFile::es_COULD_NOT_OPEN_FILE:
-                    cerr << "Could not open LogFile" << endl;
-                    break;
-                case LogFile::es_FILENAME_IS_EMPTY:
-                    cerr << "LogFile filename is empty" << endl;
-                    break;
-            }
-        }
+    try {
+        LogFile logFile( "Exceptions.log" );
+        logFile.write( "Writing from main" );
+    } catch (std::runtime_error & ex) {
+        std::cout << ex.what() << std::endl;
+    }
 }
-*/

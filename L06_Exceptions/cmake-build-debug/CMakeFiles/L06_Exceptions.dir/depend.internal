@@ -3,8 +3,10 @@
 
 CMakeFiles/L06_Exceptions.dir/main.cpp.o
  /home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFile.h
+ /home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFileException.h
  /home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/MyVector.h
  /home/stud/Desktop/Clion/Projects/L06_Exceptions/main.cpp
 CMakeFiles/L06_Exceptions.dir/source/LogFile.cpp.o
  /home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFile.h
+ /home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFileException.h
  /home/stud/Desktop/Clion/Projects/L06_Exceptions/source/LogFile.cpp

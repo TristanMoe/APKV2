@@ -85,6 +85,9 @@
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFile.h">
 			<Option target="L06_Exceptions"/>
 		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/LogFileException.h">
+			<Option target="L06_Exceptions"/>
+		</Unit>
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L06_Exceptions/headers/MyVector.h">
 			<Option target="L06_Exceptions"/>
 		</Unit>
