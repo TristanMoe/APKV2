@@ -8,6 +8,7 @@
 #include "headers/MyVector.h"
 #include "headers/LogFileException.h"
 
+// Exercise 1
 /*
 int main()
 {
@@ -30,6 +31,8 @@ int main()
 }
  */
 
+
+// Exercise 2
 int main()
 {
     try {
@@ -51,4 +54,5 @@ int main()
     } catch (std::runtime_error & ex) {
         std::cout << ex.what() << std::endl;
     }
+    return 0;
 }
