@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L07/headers/CopyableClass.h
+iostream
+-
+boost/shared_ptr.hpp
+/home/stud/Desktop/Clion/Projects/L07/headers/boost/shared_ptr.hpp
+
+/home/stud/Desktop/Clion/Projects/L07/headers/File.h
+stdio.h
+-
+cerrno
+-
+iostream
+-
+fstream
+-
+utility
+-
+
+/home/stud/Desktop/Clion/Projects/L07/main.cpp
+iostream
+-
+headers/File.h
+/home/stud/Desktop/Clion/Projects/L07/headers/File.h
+headers/CopyableClass.h
+/home/stud/Desktop/Clion/Projects/L07/headers/CopyableClass.h
+vector
+-
+
