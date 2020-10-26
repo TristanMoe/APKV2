@@ -94,12 +94,12 @@ clean: CMakeFiles/L07.dir/clean
 CMakeFiles/L07.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target L07"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target L07"
 .PHONY : CMakeFiles/L07.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/L07.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/L07.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/L07.dir/rule

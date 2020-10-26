@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/L07.dir/main.cpp.o"
+  "CMakeFiles/L07.dir/source/CString.cpp.o"
+  "CMakeFiles/L07.dir/source/Examples.cpp.o"
   "CMakeFiles/L07.dir/source/File.cpp.o"
   "L07"
   "L07.pdb"

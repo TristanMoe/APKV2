@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/stud/Desktop/Clion/Projects/L07/main.cpp" "/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles/L07.dir/main.cpp.o"
+  "/home/stud/Desktop/Clion/Projects/L07/source/CString.cpp" "/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles/L07.dir/source/CString.cpp.o"
+  "/home/stud/Desktop/Clion/Projects/L07/source/Examples.cpp" "/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles/L07.dir/source/Examples.cpp.o"
   "/home/stud/Desktop/Clion/Projects/L07/source/File.cpp" "/home/stud/Desktop/Clion/Projects/L07/cmake-build-debug/CMakeFiles/L07.dir/source/File.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

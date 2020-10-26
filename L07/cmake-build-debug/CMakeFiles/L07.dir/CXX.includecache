@@ -33,4 +33,14 @@ headers/CopyableClass.h
 /home/stud/Desktop/Clion/Projects/L07/headers/CopyableClass.h
 vector
 -
+chrono
+-
+future
+-
+vector
+-
+algorithm
+-
+iterator
+-
 

@@ -5,6 +5,10 @@ CMakeFiles/L07.dir/main.cpp.o: ../headers/CopyableClass.h
 CMakeFiles/L07.dir/main.cpp.o: ../headers/File.h
 CMakeFiles/L07.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/L07.dir/source/CString.cpp.o: ../source/CString.cpp
+
+CMakeFiles/L07.dir/source/Examples.cpp.o: ../source/Examples.cpp
+
 CMakeFiles/L07.dir/source/File.cpp.o: ../headers/File.h
 CMakeFiles/L07.dir/source/File.cpp.o: ../source/File.cpp
 

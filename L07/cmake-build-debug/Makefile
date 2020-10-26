@@ -170,6 +170,60 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/CString.o: source/CString.cpp.o
+
+.PHONY : source/CString.o
+
+# target to build an object file
+source/CString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/CString.cpp.o
+.PHONY : source/CString.cpp.o
+
+source/CString.i: source/CString.cpp.i
+
+.PHONY : source/CString.i
+
+# target to preprocess a source file
+source/CString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/CString.cpp.i
+.PHONY : source/CString.cpp.i
+
+source/CString.s: source/CString.cpp.s
+
+.PHONY : source/CString.s
+
+# target to generate assembly for a file
+source/CString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/CString.cpp.s
+.PHONY : source/CString.cpp.s
+
+source/Examples.o: source/Examples.cpp.o
+
+.PHONY : source/Examples.o
+
+# target to build an object file
+source/Examples.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/Examples.cpp.o
+.PHONY : source/Examples.cpp.o
+
+source/Examples.i: source/Examples.cpp.i
+
+.PHONY : source/Examples.i
+
+# target to preprocess a source file
+source/Examples.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/Examples.cpp.i
+.PHONY : source/Examples.cpp.i
+
+source/Examples.s: source/Examples.cpp.s
+
+.PHONY : source/Examples.s
+
+# target to generate assembly for a file
+source/Examples.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/L07.dir/build.make CMakeFiles/L07.dir/source/Examples.cpp.s
+.PHONY : source/Examples.cpp.s
+
 source/File.o: source/File.cpp.o
 
 .PHONY : source/File.o
@@ -209,6 +263,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/CString.o"
+	@echo "... source/CString.i"
+	@echo "... source/CString.s"
+	@echo "... source/Examples.o"
+	@echo "... source/Examples.i"
+	@echo "... source/Examples.s"
 	@echo "... source/File.o"
 	@echo "... source/File.i"
 	@echo "... source/File.s"
