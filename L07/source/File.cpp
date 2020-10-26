@@ -4,7 +4,7 @@
 
 #include "../headers/File.h"
 
-void File::Write(const std::string &data) {
+void File::Write(const std::string & data) {
     fprintf(file_,"%s", data.c_str());
 }
 

@@ -84,6 +84,13 @@ double sumOfNumbers(N1 && n1, Numbers&& ... numbers)
     return n1 + sumOfNumbers(std::forward<Numbers>(numbers)...);
 }
 
+// or easy way.
+template<typename ...T>
+auto sum(T ... args)
+{
+    return (args + ...);
+}
+
 int main()
 {
     double sum;
@@ -97,16 +104,61 @@ int main()
 #pragma endregion
 
 #pragma region Exercise 2 (Compile Time If)
-int main()
+/*
+// Example from https://www.youtube.com/watch?v=qHgM5UdzPQU
+template<typename T>
+auto print_type_info(const T& t)
 {
-
+    if constexpr (std::is_integral<T>::value && !std::is_same<bool, T>::value){
+        return t+1;
+    } else if constexpr (std::is_floating_point<T>::value){
+        return t+0.1;
+    } else
+    {
+        return t;
+    }
 }
 
+template<typename T, typename... Args>
+void ya_printf(const char *s, T value, Args ... args)
+{
+    while(*s)
+    {
+        if (*s == '%')
+        {
+            if (*(s + 1) == '%')
+            {
+                ++s;
+            }
+            else
+            {
+                std::cout << value;
+                if constexpr (sizeof...(args) > 0)
+                    ya_printf(s + 1, args ...);
 
+                return;
+            }
+        }
+        std::cout << *s++;
+    }
+    throw std:: logic_error("extra arguments provided to printf");
+ }
+
+int main()
+{
+    // Example
+   // std::cout << print_type_info(5) << std::endl;
+
+    ya_printf("Sensor values %, %", 10, "Hello");
+}
+
+*/
 # pragma endregion
 
 #pragma region Exercise 3 (Threading)
-/*
+
+#include <memory>
+#include <thread>
 #include <chrono>
 #include <future>
 #include <vector>
@@ -152,22 +204,39 @@ typedef Algo SmartAlgo;
 typedef Algo CoolAlgo;
 typedef Algo FantasticAlgo;
 
+void constructAndRunAlgo(std::vector<int> && data, std::promise<std::shared_ptr<Algo>> && prms)
+{
+    std::shared_ptr<Algo> algo(new Algo(data));
+    algo.get()->doAlgo();
+    prms.set_value(std::move(algo));
+}
+
+void startThread(std::vector<int> && data)
+{
+    std::promise<std::shared_ptr<Algo>> prms;
+    std::future<std::shared_ptr<Algo>> ftr = prms.get_future();
+    std::thread th(&constructAndRunAlgo, std::move(data), std::move(prms));
+    auto response = ftr.get();
+    std::cout << "Duration: " << response.get()->processingTime().count() << std::endl;
+    response.get()->print();
+    th.join();
+}
 
 int main(int argc, char* argv[])
 {
     int i = 0;
-    int n = 10000000; // Change at your leasure
+    int n = 1000; // Change at your leasure
 
     std::vector<int> data;
     data.reserve(n);
     generate_n( back_inserter( data ), n, [&i](){return i++;}  );
     random_shuffle( data.begin (), data.end () );
 
-    // Insert code here ...
-
-
+    std::cout << "Initializing threads ..." << std::endl;
+    std::thread th(&startThread, std::move(data));
+    th.join();
 
     return 0;
 }
-*/
+
 #pragma endregion

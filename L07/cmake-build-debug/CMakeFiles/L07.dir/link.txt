@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/L07.dir/main.cpp.o CMakeFiles/L07.dir/source/File.cpp.o CMakeFiles/L07.dir/source/CString.cpp.o CMakeFiles/L07.dir/source/Examples.cpp.o  -o L07 
+/usr/bin/c++  -pthread -g   CMakeFiles/L07.dir/main.cpp.o CMakeFiles/L07.dir/source/File.cpp.o CMakeFiles/L07.dir/source/CString.cpp.o CMakeFiles/L07.dir/source/Examples.cpp.o  -o L07 

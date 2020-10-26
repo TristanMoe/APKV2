@@ -33,6 +33,10 @@ headers/CopyableClass.h
 /home/stud/Desktop/Clion/Projects/L07/headers/CopyableClass.h
 vector
 -
+memory
+-
+thread
+-
 chrono
 -
 future
