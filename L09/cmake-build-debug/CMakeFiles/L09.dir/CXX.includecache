@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L09/headers/AtIndex.h
+TypeList.h
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+IsSame.h
+/home/stud/Desktop/Clion/Projects/L09/headers/IsSame.h
+
+/home/stud/Desktop/Clion/Projects/L09/headers/Binary.h
+iostream
+-
+
+/home/stud/Desktop/Clion/Projects/L09/headers/Contains.h
+TypeList.h
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+IsSame.h
+/home/stud/Desktop/Clion/Projects/L09/headers/IsSame.h
+
+/home/stud/Desktop/Clion/Projects/L09/headers/IsSame.h
+iostream
+-
+
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+iostream
+-
+
+/home/stud/Desktop/Clion/Projects/L09/main.cpp
+iostream
+-
+headers/Binary.h
+/home/stud/Desktop/Clion/Projects/L09/headers/Binary.h
+headers/TypeList.h
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+headers/IsSame.h
+/home/stud/Desktop/Clion/Projects/L09/headers/IsSame.h
+headers/Contains.h
+/home/stud/Desktop/Clion/Projects/L09/headers/Contains.h
+headers/AtIndex.h
+/home/stud/Desktop/Clion/Projects/L09/headers/AtIndex.h
+
