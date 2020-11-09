@@ -94,6 +94,12 @@
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L09/headers/IsSame.h">
 			<Option target="L09"/>
 		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L09/headers/PrintIT.h">
+			<Option target="L09"/>
+		</Unit>
+		<Unit filename="/home/stud/Desktop/Clion/Projects/L09/headers/Remove.h">
+			<Option target="L09"/>
+		</Unit>
 		<Unit filename="/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h">
 			<Option target="L09"/>
 		</Unit>

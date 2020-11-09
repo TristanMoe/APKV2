@@ -5,6 +5,8 @@ CMakeFiles/L09.dir/main.cpp.o: ../headers/AtIndex.h
 CMakeFiles/L09.dir/main.cpp.o: ../headers/Binary.h
 CMakeFiles/L09.dir/main.cpp.o: ../headers/Contains.h
 CMakeFiles/L09.dir/main.cpp.o: ../headers/IsSame.h
+CMakeFiles/L09.dir/main.cpp.o: ../headers/PrintIT.h
+CMakeFiles/L09.dir/main.cpp.o: ../headers/Remove.h
 CMakeFiles/L09.dir/main.cpp.o: ../headers/TypeList.h
 CMakeFiles/L09.dir/main.cpp.o: ../main.cpp
 

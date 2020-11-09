@@ -7,23 +7,15 @@
 #include "TypeList.h"
 #include "IsSame.h"
 
-template <typename TL, unsigned int N>
+template <typename TL, size_t N, size_t NStart = 0>
 struct AtIndex
 {
-    static const typename TL::First::type type = AtIndex<typename TL::Rest, N-1>::type;
+    using type = typename AtIndex<typename TL::Rest, N, NStart + 1>::type;
 };
 
-template <typename TL>
-struct AtIndex<TL, 0>
+template <size_t N, size_t NStart>
+struct AtIndex<NullType, N, NStart>
 {
-    static const typename TL::First::Type type;
+    using type = decltype(NullType());
 };
-
-template<unsigned int N>
-struct AtIndex<NullType, N>
-{
-    static const NullType type;
-};
-
-
 #endif //L09_ATINDEX_H

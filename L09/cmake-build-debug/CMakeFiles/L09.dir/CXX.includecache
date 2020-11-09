@@ -26,6 +26,18 @@ IsSame.h
 iostream
 -
 
+/home/stud/Desktop/Clion/Projects/L09/headers/PrintIT.h
+iostream
+-
+TypeList.h
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+
+/home/stud/Desktop/Clion/Projects/L09/headers/Remove.h
+iostream
+-
+TypeList.h
+/home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
+
 /home/stud/Desktop/Clion/Projects/L09/headers/TypeList.h
 iostream
 -
@@ -43,4 +55,8 @@ headers/Contains.h
 /home/stud/Desktop/Clion/Projects/L09/headers/Contains.h
 headers/AtIndex.h
 /home/stud/Desktop/Clion/Projects/L09/headers/AtIndex.h
+headers/PrintIT.h
+/home/stud/Desktop/Clion/Projects/L09/headers/PrintIT.h
+headers/Remove.h
+/home/stud/Desktop/Clion/Projects/L09/headers/Remove.h
 

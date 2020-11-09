@@ -19,6 +19,8 @@ int main() {
 #include "headers/IsSame.h"
 #include "headers/Contains.h"
 #include "headers/AtIndex.h"
+#include "headers/PrintIT.h"
+#include "headers/Remove.h"
 
 int main()
 {
@@ -38,8 +40,18 @@ int main()
     std::cout << "Contains <TL, std::string >::value = " << Contains <TL , std::
     string >::value << std::endl;
 
-    std::cout << "IsSame <typename AtIndex <TL , 2>::type , int >:: value" << IsSame <
-            typename AtIndex <TL , 2>::type , int>:: value << std::endl;
+    std::cout << "IsSame<typename AtIndex <TL,2>::type, int>::value " << IsSame<
+            typename AtIndex<TL, 2>::type, int>::value << std::endl;
 
+    PrintIT<TL>();
+
+    std::cout << "Contains <typename Remove <TL, int>::type ,int >::value " <<
+              Contains <typename Remove <TL , int>::type , int>::value << std::endl;
+
+    std::cout << "Contains <typename Remove <TL, char>::type , int>::value " <<
+              Contains <typename Remove<TL , char>::type , int>::value << std::endl;
+
+    typedef Remove<TL, char>::type TL1;
+    PrintIT<TL1>();
 }
 #pragma endregion
