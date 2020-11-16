@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud/Desktop/Clion/Projects/L11/headers/CustomClass.h
+iostream
+-
+vector
+-
+memory_resource
+-
+
+/home/stud/Desktop/Clion/Projects/L11/main.cpp
+iostream
+-
+headers/CustomClass.h
+/home/stud/Desktop/Clion/Projects/L11/headers/CustomClass.h
+
